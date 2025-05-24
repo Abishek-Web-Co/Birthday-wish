@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+
+<body>
+
+    <div class="desk">
+        <div class="firstpage">
+            <div class="wish">
+                <h1>HAPPY BIRTHDAY!</h1>
+                <h2 class="name">XXXXXXXX ✨</h2><b>🫶💎🫂</b>
+            </div>
+            <p>Scroll pannu keela </p>
+        </div>
+
+        <div class="message">
+            <div class="content">
+                <h2>Birthday Wishes !</h2>
+                <p>eum? Necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius distinctio, natus
+                    perferendis tenetur velit eligendi officiis blanditiis molestias deleniti, quo error? Est sequi
+                    reprehenderit nisi. Fugiat atque distinctio debitis dolorem? Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Eum eius saepe et similique alias, adipisci aliquid a neque libero, deleniti
+                    accusamus
+                    repellendus voluptatem repudiandae quasi placeat. Hic facilis illum nam.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="images">
+        <h1>Some Memories</h1>
+        <div class="list">
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+        </div>
+        <div class="list">
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+        </div>
+        <div class="list">
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/test.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="end">
+        <p class="blur">Any Extra Message !</p>
+    </div>
+
+
+    <script>
+        const swipeText = document.querySelector('.firstpage p');
+        const messageDiv = document.querySelector('.end');
+
+        function checkVisibility() {
+            const messageTop = messageDiv.offsetTop;
+            const windowHeight = window.innerHeight;
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+            // Check if the top of the message div is within the viewport
+            if (messageTop < scrollTop + windowHeight) {
+                swipeText.classList.add('hidden');
+            } else {
+                swipeText.classList.remove('hidden');
+            }
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); // Call on load to set initial state
+    </script>
+
+</body>
+
+</html>
